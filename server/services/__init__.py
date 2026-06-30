@@ -1,0 +1,1 @@
+from services.fortune_service import FortuneService
