@@ -1,0 +1,37 @@
+<view class="page">
+  <view class="top-mascot">🪷🐯🦌</view>
+  <view class="page-title">🌟 儿童专区</view>
+
+  <view class="section-title">📖 故事动画</view>
+  <view class="story-list">
+    <view class="story-card" wx:for="{{stories}}" wx:key="index" bindtap="viewStory" data-item="{{item}}">
+      <view class="story-emoji">{{item.emoji}}</view>
+      <view class="story-info">
+        <text class="story-name">{{item.name}}</text>
+        <text class="story-desc">{{item.desc}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="section-title">🎨 涂鸦游戏</view>
+  <view class="doodle-card" bindtap="goDoodle">
+    <view class="doodle-icon">🖍️</view>
+    <view class="doodle-text">佛像涂色</view>
+    <text class="doodle-arrow">›</text>
+  </view>
+
+  <view class="section-title">❓ 简单问答</view>
+  <view class="quiz-card" wx:for="{{quizList}}" wx:key="index" bindtap="goQuiz" data-item="{{item}}">
+    <view class="quiz-emoji">{{item.emoji}}</view>
+    <view class="quiz-info">
+      <text class="quiz-q">{{item.q}}</text>
+      <text class="quiz-hint">点击回答</text>
+    </view>
+  </view>
+
+  <view class="section-title">📍 打卡点</view>
+  <view class="checkin-btn" bindtap="onCheckin">
+    <text class="checkin-icon">✅</text>
+    <text class="checkin-text">今日打卡</text>
+  </view>
+</view>

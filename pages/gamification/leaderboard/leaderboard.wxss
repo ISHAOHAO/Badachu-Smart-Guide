@@ -1,0 +1,26 @@
+.page { padding: 20rpx; background: #FDF5E6; min-height: 100vh; padding-bottom: 120rpx; }
+.header { text-align: center; padding: 30rpx 0 10rpx; }
+.title { font-size: 38rpx; font-weight: bold; color: #5D4037; }
+.subtitle { font-size: 24rpx; color: #8B7355; display: block; margin-top: 6rpx; }
+
+.type-tabs { flex-direction: row; display: flex; margin: 20rpx 0; gap: 10rpx; flex-wrap: wrap; }
+.type-tab { background: #fff; padding: 14rpx 24rpx; border-radius: 10rpx; font-size: 24rpx; color: #5D4037; box-shadow: 0 1rpx 6rpx rgba(0,0,0,0.04); }
+.type-tab.active { background: #D4A84B; color: #fff; }
+
+.period-tabs { flex-direction: row; display: flex; margin: 10rpx 0 20rpx; background: #fff; border-radius: 12rpx; overflow: hidden; }
+.period-tab { flex: 1; text-align: center; padding: 18rpx 0; font-size: 26rpx; color: #8B7355; }
+.period-tab.active { color: #fff; background: #C0392B; font-weight: bold; }
+
+.list { background: #fff; border-radius: 16rpx; overflow: hidden; }
+.list-item { flex-direction: row; align-items: center; display: flex; padding: 22rpx 20rpx; border-bottom: 1rpx solid #f0e8d8; gap: 14rpx; }
+.rank { width: 48rpx; height: 48rpx; text-align: center; line-height: 48rpx; font-size: 26rpx; color: #8B7355; flex-shrink: 0; }
+.rank.top { font-size: 30rpx; }
+.avatar { width: 56rpx; height: 56rpx; border-radius: 50%; background: #f0e8d8; text-align: center; line-height: 56rpx; font-size: 32rpx; flex-shrink: 0; }
+.list-info { flex: 1; }
+.nickname { font-size: 28rpx; color: #5D4037; font-weight: bold; display: block; }
+.badge { font-size: 20rpx; color: #8B7355; display: block; margin-top: 2rpx; }
+.score { font-size: 28rpx; color: #D4A84B; font-weight: bold; }
+
+.my-rank { flex-direction: row; align-items: center; display: flex; position: fixed; bottom: 0; left: 0; right: 0; background: #fff; padding: 22rpx 20rpx; border-top: 2rpx solid #D4A84B; gap: 14rpx; box-shadow: 0 -4rpx 20rpx rgba(0,0,0,0.06); }
+.my-rank .rank { font-weight: bold; color: #C0392B; }
+.my-rank .score { color: #C0392B; }

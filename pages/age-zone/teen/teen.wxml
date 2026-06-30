@@ -1,0 +1,51 @@
+<view class="page">
+  <view class="page-title">🧑‍🎤 青少年专区</view>
+  <view class="page-subtitle">科技感 · 传统文化 · 探索无限</view>
+
+  <view class="grid-2col">
+    <view class="card" bindtap="goExplore">
+      <view class="card-icon">🔍</view>
+      <view class="card-title">文化探索</view>
+      <text class="card-desc">发现佛教文化瑰宝</text>
+    </view>
+    <view class="card" bindtap="goPuzzle">
+      <view class="card-icon">🧩</view>
+      <view class="card-title">解谜游戏</view>
+      <text class="card-desc">烧脑有趣的挑战</text>
+    </view>
+  </view>
+
+  <view class="section-title">🧘 虚拟禅修</view>
+  <view class="meditation-card">
+    <view class="meditation-icon">🧘</view>
+    <view class="meditation-info">
+      <text class="meditation-time">{{meditationTime}}s</text>
+      <text class="meditation-label">当前冥想时长</text>
+    </view>
+    <view class="meditation-controls">
+      <view class="ctrl-btn {{meditating ? 'active' : ''}}" bindtap="toggleMeditation">
+        {{meditating ? '⏸ 暂停' : '▶ 开始'}}
+      </view>
+      <view class="ctrl-btn reset" bindtap="resetMeditation">↺ 重置</view>
+    </view>
+  </view>
+
+  <view class="section-title">🎨 创意工坊</view>
+  <view class="card-wide" bindtap="goWorkshop">
+    <view class="card-wide-icon">🎭</view>
+    <view class="card-wide-info">
+      <text class="card-wide-title">创意工坊</text>
+      <text class="card-wide-desc">创作你的佛教艺术作品</text>
+    </view>
+    <text class="card-wide-arrow">›</text>
+  </view>
+
+  <view class="section-title">🎯 本周挑战</view>
+  <view class="challenge-card">
+    <text class="challenge-text">{{challenge}}</text>
+    <view class="challenge-progress">
+      <view class="challenge-fill" style="width: {{challengeProgress}}%"></view>
+    </view>
+    <text class="challenge-percent">{{challengeProgress}}%</text>
+  </view>
+</view>

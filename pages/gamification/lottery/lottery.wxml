@@ -1,0 +1,41 @@
+<view class="page">
+  <view class="header">
+    <text class="title">🎁 福光抽奖</text>
+    <text class="subtitle">试试你的运气，赢取丰厚奖励</text>
+  </view>
+
+  <view class="wheel-container">
+    <view class="wheel" animation="{{wheelAnim}}">
+      <view class="wheel-segment" wx:for="{{segments}}" wx:key="index" style="transform: rotate({{rotateOffset + index * segAngle}}deg); background: {{item.color}};">
+        <text class="wheel-label" style="transform: rotate({{segAngle/2}}deg);">{{item.label}}</text>
+      </view>
+    </view>
+    <view class="wheel-pointer" bindtap="onSpin">🎯</view>
+  </view>
+
+  <view class="info-row">
+    <view class="info-item">
+      <text class="info-label">今日免费</text>
+      <text class="info-value">{{freeChances > 0 ? freeChances + '/1' : '0/1'}}</text>
+    </view>
+    <view class="info-item">
+      <text class="info-label">抽奖消耗</text>
+      <text class="info-value">100福光</text>
+    </view>
+    <view class="info-item">
+      <text class="info-label">福光余额</text>
+      <text class="info-value gold">{{fuguang}}</text>
+    </view>
+  </view>
+
+  <view class="section-title">奖池概率</view>
+  <view class="pool-list">
+    <view class="pool-item" wx:for="{{prizePool}}" wx:key="index">
+      <view class="pool-left">
+        <text class="pool-dot" style="background: {{item.color}};"></text>
+        <text class="pool-name">{{item.name}}</text>
+      </view>
+      <text class="pool-rate">{{item.rate}}</text>
+    </view>
+  </view>
+</view>

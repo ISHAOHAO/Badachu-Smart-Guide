@@ -1,0 +1,43 @@
+<view class="page">
+  <view class="header">
+    <text class="title">🏆 排行榜</text>
+    <text class="subtitle">看看你在修行路上的位置</text>
+  </view>
+
+  <view class="type-tabs">
+    <view class="type-tab {{currentType === item.key ? 'active' : ''}}" wx:for="{{types}}" wx:for-item="item" wx:key="key" data-key="{{item.key}}" bindtap="onSwitchType">
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+
+  <view class="period-tabs">
+    <view class="period-tab {{currentPeriod === item.key ? 'active' : ''}}" wx:for="{{periods}}" wx:for-item="item" wx:key="key" data-key="{{item.key}}" bindtap="onSwitchPeriod">
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+
+  <view class="list">
+    <view class="list-item" wx:for="{{rankList}}" wx:key="index">
+      <view class="rank {{index < 3 ? 'top' : ''}}">
+        <text wx:if="{{index < 3}}">{{medals[index]}}</text>
+        <text wx:else>{{index + 1}}</text>
+      </view>
+      <text class="avatar">{{item.avatar}}</text>
+      <view class="list-info">
+        <text class="nickname">{{item.nickname}}</text>
+        <text class="badge">{{item.badge}}</text>
+      </view>
+      <text class="score">{{item.score}}</text>
+    </view>
+  </view>
+
+  <view class="my-rank">
+    <view class="rank">{{myRank.rank}}</view>
+    <text class="avatar">{{myRank.avatar}}</text>
+    <view class="list-info">
+      <text class="nickname">{{myRank.nickname}}</text>
+      <text class="badge">{{myRank.badge}}</text>
+    </view>
+    <text class="score">{{myRank.score}}</text>
+  </view>
+</view>

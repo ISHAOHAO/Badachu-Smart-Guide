@@ -1,0 +1,99 @@
+.page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f0e8d8, #FDF5E6);
+  padding: 30rpx;
+}
+.page-title {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #5D4037;
+  text-align: center;
+}
+.page-subtitle {
+  text-align: center;
+  font-size: 22rpx;
+  color: #999;
+  margin-bottom: 30rpx;
+}
+.feature-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20rpx;
+  margin-bottom: 30rpx;
+}
+.feature-card {
+  width: calc(50% - 10rpx);
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 32rpx 20rpx;
+  text-align: center;
+  box-shadow: 0 4rpx 16rpx rgba(93,64,55,0.08);
+  border: 1rpx solid #e8ddd0;
+}
+.feature-icon { font-size: 52rpx; margin-bottom: 12rpx; }
+.feature-title { font-size: 26rpx; font-weight: bold; color: #5D4037; display: block; }
+.feature-desc { font-size: 20rpx; color: #bbb; display: block; margin-top: 6rpx; }
+.section-title {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #5D4037;
+  margin-bottom: 16rpx;
+  margin-top: 10rpx;
+  padding-left: 8rpx;
+  border-left: 6rpx solid #D4A84B;
+}
+.recommend-card {
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 32rpx;
+  margin-bottom: 30rpx;
+  box-shadow: 0 4rpx 16rpx rgba(93,64,55,0.08);
+  border: 1rpx solid #e8ddd0;
+  position: relative;
+}
+.recommend-tag {
+  position: absolute;
+  top: 16rpx;
+  right: 16rpx;
+  background: #C0392B;
+  color: #fff;
+  font-size: 20rpx;
+  padding: 4rpx 16rpx;
+  border-radius: 20rpx;
+}
+.recommend-title {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #5D4037;
+  display: block;
+  margin-bottom: 10rpx;
+}
+.recommend-desc {
+  font-size: 24rpx;
+  color: #999;
+  display: block;
+  margin-bottom: 20rpx;
+  line-height: 1.6;
+}
+.recommend-btn {
+  display: inline-block;
+  background: #D4A84B;
+  color: #fff;
+  padding: 12rpx 40rpx;
+  border-radius: 30rpx;
+  font-size: 26rpx;
+}
+.full-menu {
+  background: #fff;
+  border-radius: 20rpx;
+  overflow: hidden;
+  box-shadow: 0 4rpx 16rpx rgba(93,64,55,0.08);
+  margin-bottom: 40rpx;
+}
+.menu-row {
+  padding: 28rpx 30rpx;
+  font-size: 28rpx;
+  color: #5D4037;
+  border-bottom: 1rpx solid #f0e8d8;
+}
+.menu-row:last-child { border-bottom: none; }

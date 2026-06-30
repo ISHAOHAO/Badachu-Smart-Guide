@@ -1,0 +1,39 @@
+<view class="page">
+  <view class="page-title">🙏 银发专区</view>
+  <view class="page-subtitle">大字 · 简明 · 贴心</view>
+
+  <view class="section-title">🏥 健康养生</view>
+  <view class="health-card" wx:for="{{healthTips}}" wx:key="index">
+    <view class="health-icon">{{item.icon}}</view>
+    <view class="health-info">
+      <text class="health-title">{{item.title}}</text>
+      <text class="health-desc">{{item.desc}}</text>
+    </view>
+  </view>
+
+  <view class="section-title">📖 经典诵读</view>
+  <view class="chant-card" wx:for="{{chantList}}" wx:key="index" bindtap="playChant" data-item="{{item}}">
+    <view class="chant-icon">{{item.icon}}</view>
+    <view class="chant-info">
+      <text class="chant-name">{{item.name}}</text>
+      <text class="chant-length">{{item.length}}</text>
+    </view>
+    <view class="chant-play">▶</view>
+  </view>
+
+  <view class="section-title">🎤 语音功能</view>
+  <view class="voice-area">
+    <view class="voice-btn voice-big" bindtap="voiceRead">🔊 语音朗读</view>
+    <view class="voice-btn voice-nav" bindtap="voiceNav">🗣️ 语音导航</view>
+  </view>
+
+  <view class="section-title">🧘 静心禅修</view>
+  <view class="zen-card" bindtap="startZen">
+    <view class="zen-content">
+      <text class="zen-title">安那般那念</text>
+      <text class="zen-desc">数息观 · 适合老年人的静心法门</text>
+      <text class="zen-hint">点击开始 →</text>
+    </view>
+    <view class="zen-icon">🧘</view>
+  </view>
+</view>

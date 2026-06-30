@@ -1,0 +1,56 @@
+<view class="page">
+  <view class="header">
+    <text class="title">游戏化互动</text>
+    <text class="subtitle">在行走中修行，在游览中集福</text>
+  </view>
+
+  <view class="card">
+    <view class="card-header">
+      <text class="card-title">福光余额</text>
+      <text class="card-badge">{{levelInfo.name}}</text>
+    </view>
+    <text class="card-amount">{{fuguang}}</text>
+    <view class="level-bar">
+      <view class="level-bar-bg">
+        <view class="level-bar-fill" style="width: {{levelInfo.progress}}%"></view>
+      </view>
+      <text class="level-text">{{levelInfo.progress}}%</text>
+    </view>
+    <view class="level-info">
+      <text>{{levelInfo.prevName}}</text>
+      <text>{{levelInfo.nextName}}</text>
+    </view>
+  </view>
+
+  <view class="grid">
+    <view class="grid-item" data-page="treasure" bindtap="onNavigate">
+      <text class="grid-icon">🏺</text>
+      <text class="grid-label">集宝系统</text>
+    </view>
+    <view class="grid-item" data-page="quiz" bindtap="onNavigate">
+      <text class="grid-icon">📝</text>
+      <text class="grid-label">文化问答</text>
+    </view>
+    <view class="grid-item" data-page="lottery" bindtap="onNavigate">
+      <text class="grid-icon">🎁</text>
+      <text class="grid-label">福光抽奖</text>
+    </view>
+    <view class="grid-item" data-page="leaderboard" bindtap="onNavigate">
+      <text class="grid-icon">🏆</text>
+      <text class="grid-label">排行榜</text>
+    </view>
+  </view>
+
+  <view class="section-title">每日任务</view>
+  <view class="task-list">
+    <view class="task-item {{item.done ? 'done' : ''}}" wx:for="{{tasks}}" wx:key="index" bindtap="onDoTask" data-index="{{index}}">
+      <view class="task-left">
+        <view class="task-check {{item.done ? 'checked' : ''}}">
+          <text wx:if="{{item.done}}">✓</text>
+        </view>
+        <text class="task-name">{{item.name}}</text>
+      </view>
+      <text class="task-points">+{{item.points}}福光</text>
+    </view>
+  </view>
+</view>

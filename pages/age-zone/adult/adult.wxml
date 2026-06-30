@@ -1,0 +1,43 @@
+<view class="page">
+  <view class="page-title">🧘 成人专区</view>
+  <view class="page-subtitle">深度修行 · 文化修养 · 内心宁静</view>
+
+  <view class="feature-grid">
+    <view class="feature-card" bindtap="goDeepRead">
+      <view class="feature-icon">📚</view>
+      <text class="feature-title">深度解读</text>
+      <text class="feature-desc">经典智慧，深入浅出</text>
+    </view>
+    <view class="feature-card" bindtap="goPracticeRecord">
+      <view class="feature-icon">📝</view>
+      <text class="feature-title">修行记录</text>
+      <text class="feature-desc">记录每日修行点滴</text>
+    </view>
+    <view class="feature-card" bindtap="goDharma">
+      <view class="feature-icon">🪷</view>
+      <text class="feature-title">法会信息</text>
+      <text class="feature-desc">最新法会活动安排</text>
+    </view>
+    <view class="feature-card" bindtap="goCourses">
+      <view class="feature-icon">🎓</view>
+      <text class="feature-title">文化课程</text>
+      <text class="feature-desc">系统学习佛教文化</text>
+    </view>
+  </view>
+
+  <view class="section-title">📖 本周推荐</view>
+  <view class="recommend-card">
+    <view class="recommend-tag">推荐</view>
+    <text class="recommend-title">{{recommend.title}}</text>
+    <text class="recommend-desc">{{recommend.desc}}</text>
+    <view class="recommend-btn" bindtap="viewRecommend">立即阅读</view>
+  </view>
+
+  <view class="section-title">🔗 完整功能</view>
+  <view class="full-menu">
+    <view class="menu-row" bindtap="goNav">🗺️ 智慧导览</view>
+    <view class="menu-row" bindtap="goCheckin">✅ 打卡记录</view>
+    <view class="menu-row" bindtap="goGame">🎮 游戏化学习</view>
+    <view class="menu-row" bindtap="goCommunity">👥 同修社区</view>
+  </view>
+</view>

@@ -1,0 +1,41 @@
+<view class="page">
+  <view class="title">🏅 徽章墙</view>
+  <view class="progress-bar">
+    <text class="progress-text">收集进度：{{ownedCount}}/{{totalCount}}</text>
+    <view class="progress-track">
+      <view class="progress-fill" style="width: {{progressPercent}}%"></view>
+    </view>
+  </view>
+
+  <view class="tabs">
+    <view class="tab {{currentTab === 0 ? 'active' : ''}}" bindtap="switchTab" data-index="0">
+      寺院徽章<text class="tab-count">(8)</text>
+    </view>
+    <view class="tab {{currentTab === 1 ? 'active' : ''}}" bindtap="switchTab" data-index="1">
+      隐藏徽章<text class="tab-count">(6)</text>
+    </view>
+    <view class="tab {{currentTab === 2 ? 'active' : ''}}" bindtap="switchTab" data-index="2">
+      成就徽章<text class="tab-count">(11)</text>
+    </view>
+    <view class="tab {{currentTab === 3 ? 'active' : ''}}" bindtap="switchTab" data-index="3">
+      节日限定<text class="tab-count">(5)</text>
+    </view>
+  </view>
+
+  <view class="badge-grid">
+    <view class="badge-item {{item.owned ? '' : 'locked'}}" wx:for="{{badgeList}}" wx:key="index" bindtap="showDetail" data-item="{{item}}">
+      <view class="badge-icon">{{item.owned ? item.icon : '🔒'}}</view>
+      <text class="badge-name">{{item.name}}</text>
+    </view>
+  </view>
+
+  <view class="modal" wx:if="{{showModal}}" bindtap="hideDetail">
+    <view class="modal-content" catchtap="">
+      <view class="modal-icon">{{detailItem.icon}}</view>
+      <view class="modal-name">{{detailItem.name}}</view>
+      <view class="modal-info" wx:if="{{detailItem.owned}}">获得时间：{{detailItem.gotDate}}</view>
+      <view class="modal-info">获得条件：{{detailItem.condition}}</view>
+      <view class="modal-close" bindtap="hideDetail">关 闭</view>
+    </view>
+  </view>
+</view>

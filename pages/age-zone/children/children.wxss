@@ -1,0 +1,98 @@
+.page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #FFF8E7, #FDF5E6);
+  padding: 30rpx;
+}
+.top-mascot {
+  text-align: center;
+  font-size: 80rpx;
+  margin-bottom: 10rpx;
+}
+.page-title {
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #D4A84B;
+  margin-bottom: 30rpx;
+}
+.section-title {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #5D4037;
+  margin-bottom: 16rpx;
+  margin-top: 10rpx;
+}
+.story-list {
+  margin-bottom: 20rpx;
+}
+.story-card {
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 24rpx;
+  margin-bottom: 16rpx;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4rpx 16rpx rgba(212,168,75,0.15);
+  border: 2rpx solid rgba(212,168,75,0.2);
+}
+.story-emoji {
+  font-size: 60rpx;
+  margin-right: 24rpx;
+  width: 80rpx;
+  text-align: center;
+}
+.story-info {
+  flex: 1;
+}
+.story-name {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #5D4037;
+  display: block;
+}
+.story-desc {
+  font-size: 22rpx;
+  color: #999;
+  margin-top: 4rpx;
+  display: block;
+}
+.doodle-card {
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 28rpx 24rpx;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+  box-shadow: 0 4rpx 16rpx rgba(212,168,75,0.15);
+  border: 2rpx solid rgba(212,168,75,0.2);
+}
+.doodle-icon { font-size: 52rpx; margin-right: 20rpx; }
+.doodle-text { flex: 1; font-size: 28rpx; font-weight: bold; color: #5D4037; }
+.doodle-arrow { font-size: 40rpx; color: #D4A84B; }
+.quiz-card {
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 24rpx;
+  margin-bottom: 16rpx;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4rpx 16rpx rgba(212,168,75,0.15);
+}
+.quiz-emoji { font-size: 48rpx; margin-right: 20rpx; }
+.quiz-info { flex: 1; }
+.quiz-q { font-size: 26rpx; color: #5D4037; display: block; }
+.quiz-hint { font-size: 20rpx; color: #D4A84B; margin-top: 4rpx; display: block; }
+.checkin-btn {
+  width: 80%;
+  margin: 20rpx auto 40rpx;
+  background: linear-gradient(135deg, #D4A84B, #C0392B);
+  border-radius: 50rpx;
+  padding: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12rpx;
+  box-shadow: 0 8rpx 24rpx rgba(192,57,43,0.3);
+}
+.checkin-icon { font-size: 44rpx; }
+.checkin-text { font-size: 36rpx; font-weight: bold; color: #fff; }

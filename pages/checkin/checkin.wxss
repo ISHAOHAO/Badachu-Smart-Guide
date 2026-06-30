@@ -1,0 +1,202 @@
+.page {
+  background: #FDF5E6;
+  min-height: 100vh;
+  padding-bottom: 40rpx;
+}
+
+.header {
+  padding: 60rpx 40rpx 30rpx;
+  text-align: center;
+}
+
+.title {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #5D4037;
+  display: block;
+}
+
+.subtitle {
+  font-size: 26rpx;
+  color: #8B7355;
+  margin-top: 10rpx;
+  display: block;
+}
+
+.banner {
+  margin: 0 30rpx 30rpx;
+  padding: 24rpx 30rpx;
+  background: linear-gradient(135deg, #D4A84B, #C0392B);
+  border-radius: 16rpx;
+  display: flex;
+  align-items: center;
+}
+
+.banner-icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 16rpx;
+}
+
+.banner-text {
+  font-size: 28rpx;
+  color: #FFF;
+  font-weight: 500;
+}
+
+.section {
+  margin: 0 30rpx 30rpx;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #5D4037;
+}
+
+.section-count {
+  font-size: 26rpx;
+  color: #D4A84B;
+  font-weight: 500;
+}
+
+.spot-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16rpx;
+}
+
+.spot-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20rpx 10rpx;
+  background: #FFF;
+  border-radius: 16rpx;
+  box-shadow: 0 2rpx 12rpx rgba(93,64,55,0.08);
+}
+
+.spot-item.checked {
+  background: linear-gradient(135deg, #FDF5E6, #F5E6D0);
+  border: 2rpx solid #D4A84B;
+}
+
+.spot-icon {
+  width: 80rpx;
+  height: 80rpx;
+  position: relative;
+  margin-bottom: 10rpx;
+}
+
+.spot-icon image {
+  width: 100%;
+  height: 100%;
+}
+
+.spot-status {
+  position: absolute;
+  top: -8rpx;
+  right: -8rpx;
+  width: 32rpx;
+  height: 32rpx;
+  background: #D4A84B;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-check {
+  color: #FFF;
+  font-size: 20rpx;
+  font-weight: bold;
+}
+
+.spot-name {
+  font-size: 24rpx;
+  color: #5D4037;
+  margin-bottom: 6rpx;
+}
+
+.spot-blessing {
+  font-size: 20rpx;
+  color: #C0392B;
+  font-weight: 500;
+}
+
+.spot-done {
+  font-size: 20rpx;
+  color: #D4A84B;
+}
+
+.hidden-area {
+  width: 100%;
+  height: 160rpx;
+  border-radius: 16rpx;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hidden-bg {
+  width: 100%;
+  height: 100%;
+  filter: blur(4rpx) brightness(0.6);
+}
+
+.hidden-hint {
+  position: absolute;
+  font-size: 30rpx;
+  color: #D4A84B;
+  font-weight: bold;
+  letter-spacing: 4rpx;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16rpx;
+}
+
+.photo-item {
+  border-radius: 12rpx;
+  overflow: hidden;
+  position: relative;
+  height: 200rpx;
+}
+
+.photo-item image {
+  width: 100%;
+  height: 100%;
+}
+
+.photo-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12rpx;
+  background: linear-gradient(transparent, rgba(93,64,55,0.7));
+  display: flex;
+  justify-content: space-between;
+}
+
+.photo-spot {
+  font-size: 22rpx;
+  color: #FFF;
+  font-weight: 500;
+}
+
+.photo-time {
+  font-size: 20rpx;
+  color: #F5E6D0;
+}

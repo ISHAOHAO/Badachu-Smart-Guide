@@ -1,0 +1,68 @@
+page {
+  --color-gold: #D4A84B;
+  --color-gold-light: #E8C97A;
+  --color-gold-dark: #B8922E;
+  --color-red: #C0392B;
+  --color-red-light: #E74C3C;
+  --color-brown: #5D4037;
+  --color-brown-light: #795548;
+  --color-brown-dark: #3E2723;
+  --color-cream: #FDF5E6;
+  --color-cream-light: #FFF8F0;
+  --color-green: #2E7D32;
+  --color-blue: #1A237E;
+  --color-gray-1: #333333;
+  --color-gray-2: #666666;
+  --color-gray-3: #999999;
+  --color-gray-4: #CCCCCC;
+  --color-gray-5: #EEEEEE;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-success: #2E7D32;
+  --color-warning: #F57F17;
+  --color-error: #C0392B;
+  --color-info: #1A237E;
+
+  --bg-primary: #FDF5E6;
+  --bg-secondary: #FFF8F0;
+  --bg-card: #FFFFFF;
+  --bg-dark: #5D4037;
+
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-tertiary: #999999;
+  --text-gold: #D4A84B;
+  --text-white: #FFFFFF;
+  --text-dark: #5D4037;
+
+  --border-color: #EEEEEE;
+  --border-gold: #D4A84B;
+
+  --shadow-sm: 0 2rpx 8rpx rgba(0,0,0,0.06);
+  --shadow-md: 0 4rpx 16rpx rgba(0,0,0,0.08);
+  --shadow-lg: 0 8rpx 32rpx rgba(0,0,0,0.12);
+  --shadow-gold: 0 4rpx 16rpx rgba(212,168,75,0.3);
+
+  --radius-sm: 8rpx;
+  --radius-md: 16rpx;
+  --radius-lg: 24rpx;
+  --radius-xl: 32rpx;
+  --radius-full: 50%;
+
+  --font-xs: 22rpx;
+  --font-sm: 26rpx;
+  --font-base: 28rpx;
+  --font-md: 30rpx;
+  --font-lg: 34rpx;
+  --font-xl: 40rpx;
+  --font-xxl: 48rpx;
+  --font-title: 56rpx;
+
+  --spacing-xs: 8rpx;
+  --spacing-sm: 16rpx;
+  --spacing-md: 24rpx;
+  --spacing-lg: 32rpx;
+  --spacing-xl: 48rpx;
+
+  --safe-bottom: env(safe-area-inset-bottom, 0);
+}

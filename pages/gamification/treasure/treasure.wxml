@@ -1,0 +1,37 @@
+<view class="page">
+  <view class="header">
+    <text class="title">💎 集宝系统</text>
+    <text class="subtitle">收集八种灵物，获得福光加持</text>
+  </view>
+
+  <view class="progress-card">
+    <text class="progress-title">收集进度</text>
+    <view class="progress-bar">
+      <view class="progress-fill" style="width: {{collectProgress}}%"></view>
+    </view>
+    <text class="progress-text">{{collectedCount}}/{{treasures.length}} 已收集</text>
+  </view>
+
+  <view class="grid">
+    <view class="grid-item {{item.collected ? 'collected' : ''}}" wx:for="{{treasures}}" wx:key="index" bindtap="onCollect" data-index="{{index}}">
+      <text class="grid-emoji">{{item.emoji}}</text>
+      <text class="grid-name">{{item.name}}</text>
+      <text class="grid-desc">{{item.desc}}</text>
+      <view wx:if="{{item.collected}}" class="collected-badge">✓</view>
+    </view>
+  </view>
+
+  <view class="section-title">福光兑换</view>
+  <view class="exchange-list">
+    <view class="exchange-item" wx:for="{{exchangeList}}" wx:key="index" bindtap="onExchange" data-index="{{index}}">
+      <view class="exchange-left">
+        <text class="exchange-icon">{{item.icon}}</text>
+        <text class="exchange-name">{{item.name}}</text>
+      </view>
+      <view class="exchange-right">
+        <text class="exchange-cost">{{item.cost}}福光</text>
+        <text class="exchange-btn {{item.owned ? 'owned' : ''}}">{{item.owned ? '已拥有' : '兑换'}}</text>
+      </view>
+    </view>
+  </view>
+</view>

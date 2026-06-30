@@ -1,0 +1,27 @@
+.page { padding: 20rpx; background: #FDF5E6; min-height: 100vh; }
+.header { text-align: center; padding: 30rpx 0 10rpx; }
+.title { font-size: 38rpx; font-weight: bold; color: #5D4037; }
+.subtitle { font-size: 24rpx; color: #8B7355; display: block; margin-top: 6rpx; }
+.progress-card { background: #fff; border-radius: 16rpx; padding: 24rpx; margin: 20rpx 0; box-shadow: 0 2rpx 12rpx rgba(0,0,0,0.05); }
+.progress-title { font-size: 26rpx; color: #5D4037; }
+.progress-bar { height: 14rpx; background: #f0e8d8; border-radius: 7rpx; margin: 14rpx 0; overflow: hidden; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, #D4A84B, #C0392B); border-radius: 7rpx; }
+.progress-text { font-size: 22rpx; color: #8B7355; }
+.grid { display: flex; flex-wrap: wrap; gap: 14rpx; margin: 20rpx 0; }
+.grid-item { width: calc(25% - 10.5rpx); background: #fff; border-radius: 14rpx; padding: 20rpx 0; text-align: center; position: relative; box-shadow: 0 2rpx 10rpx rgba(0,0,0,0.05); }
+.grid-item.collected { background: linear-gradient(135deg, #D4A84B, #E8C86A); }
+.grid-emoji { font-size: 44rpx; display: block; }
+.grid-name { font-size: 26rpx; color: #5D4037; margin-top: 8rpx; display: block; font-weight: bold; }
+.grid-desc { font-size: 18rpx; color: #8B7355; display: block; margin-top: 4rpx; }
+.collected-badge { position: absolute; top: 6rpx; right: 6rpx; background: #C0392B; color: #fff; width: 28rpx; height: 28rpx; border-radius: 50%; font-size: 18rpx; line-height: 28rpx; text-align: center; }
+.section-title { font-size: 32rpx; font-weight: bold; color: #5D4037; margin: 30rpx 0 20rpx; padding-left: 10rpx; border-left: 6rpx solid #D4A84B; }
+.exchange-list { background: #fff; border-radius: 16rpx; overflow: hidden; }
+.exchange-item { flex-direction: row; justify-content: space-between; align-items: center; display: flex; padding: 24rpx; border-bottom: 1rpx solid #f0e8d8; }
+.exchange-item:last-child { border-bottom: none; }
+.exchange-left { flex-direction: row; align-items: center; display: flex; }
+.exchange-icon { font-size: 36rpx; margin-right: 16rpx; }
+.exchange-name { font-size: 28rpx; color: #5D4037; }
+.exchange-right { flex-direction: row; align-items: center; display: flex; }
+.exchange-cost { font-size: 24rpx; color: #D4A84B; margin-right: 16rpx; font-weight: bold; }
+.exchange-btn { background: #D4A84B; color: #fff; padding: 6rpx 20rpx; border-radius: 20rpx; font-size: 24rpx; }
+.exchange-btn.owned { background: #ccc; }

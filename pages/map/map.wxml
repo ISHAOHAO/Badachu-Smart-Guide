@@ -1,0 +1,86 @@
+<view class="page">
+  <view class="map-container">
+    <map
+      id="map"
+      latitude="{{currentLat}}"
+      longitude="{{currentLng}}"
+      scale="{{scale}}"
+      markers="{{markers}}"
+      polyline="{{polyline}}"
+      bindmarkertap="onMarkerTap"
+      show-location
+      style="width: 100%; height: 100%;"
+    ></map>
+
+    <view class="map-overlay top">
+      <view class="search-bar" bindtap="searchSpots">
+        <text class="search-icon">🔍</text>
+        <text class="search-text">搜索景点...</text>
+      </view>
+    </view>
+
+    <view class="map-overlay bottom">
+      <view class="route-selector">
+        <view class="route-tab {{selectedRoute === 'recommend' ? 'active' : ''}}" data-route="recommend" bindtap="selectRoute">
+          <text class="route-icon">⭐</text>
+          <text>推荐路线</text>
+        </view>
+        <view class="route-tab {{selectedRoute === 'culture' ? 'active' : ''}}" data-route="culture" bindtap="selectRoute">
+          <text class="route-icon">📚</text>
+          <text>文化深度</text>
+        </view>
+        <view class="route-tab {{selectedRoute === 'leisure' ? 'active' : ''}}" data-route="leisure" bindtap="selectRoute">
+          <text class="route-icon">🌿</text>
+          <text>休闲观光</text>
+        </view>
+        <view class="route-tab {{selectedRoute === 'family' ? 'active' : ''}}" data-route="family" bindtap="selectRoute">
+          <text class="route-icon">👨‍👩‍👧‍👦</text>
+          <text>亲子友好</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="spot-panel {{showPanel ? 'visible' : ''}}">
+    <view class="panel-handle" bindtap="togglePanel">
+      <view class="handle-bar"></view>
+    </view>
+    <view class="panel-content" wx:if="{{selectedSpot}}">
+      <text class="panel-name">{{selectedSpot.name}}</text>
+      <text class="panel-subtitle">{{selectedSpot.templeOrder}} · {{selectedSpot.subtitle}}</text>
+      <text class="panel-desc">{{selectedSpot.description}}</text>
+      <view class="panel-actions">
+        <view class="panel-btn primary" bindtap="goSpotDetail">
+          <text>查看详情</text>
+        </view>
+        <view class="panel-btn" bindtap="navigateToSpot">
+          <text>导航前往</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="legend-btn" bindtap="toggleLegend">
+    <text>图例</text>
+  </view>
+
+  <view class="legend-panel {{showLegend ? 'visible' : ''}}">
+    <text class="legend-title">地图图例</text>
+    <view class="legend-item">
+      <view class="legend-dot temple"></view>
+      <text>寺庙</text>
+    </view>
+    <view class="legend-item">
+      <view class="legend-dot hidden"></view>
+      <text>隐藏打卡点</text>
+    </view>
+    <view class="legend-item">
+      <view class="legend-dot facility"></view>
+      <text>公共设施</text>
+    </view>
+    <view class="legend-item">
+      <view class="legend-dot current"></view>
+      <text>当前位置</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,59 @@
+<view class="page ar-page">
+  <view class="camera-placeholder">
+    <view class="camera-overlay">
+      <view class="ar-frame">
+        <view class="frame-corner tl"></view>
+        <view class="frame-corner tr"></view>
+        <view class="frame-corner bl"></view>
+        <view class="frame-corner br"></view>
+      </view>
+
+      <view class="ar-info-card">
+        <view class="ar-icon">
+          <image src="/images/ar-info.png" mode="aspectFit"></image>
+        </view>
+        <view class="ar-info-content">
+          <text class="ar-title">佛牙舍利塔</text>
+          <text class="ar-desc">始建于唐代，高13层，供奉佛牙舍利</text>
+          <view class="ar-tags">
+            <text class="ar-tag">全国重点文物保护单位</text>
+            <text class="ar-tag">佛教圣地</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="bottom-bar">
+    <view class="filter-list">
+      <view class="filter-item {{currentFilter === 'none' ? 'active' : ''}}" bindtap="setFilter" data-filter="none">
+        <view class="filter-preview none"></view>
+        <text>无</text>
+      </view>
+      <view class="filter-item {{currentFilter === 'gold' ? 'active' : ''}}" bindtap="setFilter" data-filter="gold">
+        <view class="filter-preview gold"></view>
+        <text>金光</text>
+      </view>
+      <view class="filter-item {{currentFilter === 'lotus' ? 'active' : ''}}" bindtap="setFilter" data-filter="lotus">
+        <view class="filter-preview lotus"></view>
+        <text>莲花</text>
+      </view>
+      <view class="filter-item {{currentFilter === 'zen' ? 'active' : ''}}" bindtap="setFilter" data-filter="zen">
+        <view class="filter-preview zen"></view>
+        <text>禅意</text>
+      </view>
+    </view>
+
+    <view class="camera-actions">
+      <view class="action-btn gallery" bindtap="openGallery">
+        <image src="/images/gallery-icon.png" mode="aspectFit"></image>
+      </view>
+      <view class="capture-btn" bindtap="takePhoto">
+        <view class="capture-inner"></view>
+      </view>
+      <view class="action-btn switch" bindtap="switchCamera">
+        <image src="/images/switch-icon.png" mode="aspectFit"></image>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,14 @@
+.page { padding: 20rpx; background: #FDF5E6; min-height: 100vh; }
+.header { text-align: center; padding: 30rpx 0 20rpx; }
+.title { font-size: 38rpx; font-weight: bold; color: #5D4037; }
+
+.section { background: #fff; border-radius: 16rpx; overflow: hidden; margin-bottom: 20rpx; box-shadow: 0 2rpx 12rpx rgba(0,0,0,0.05); }
+.section-title { font-size: 28rpx; color: #8B7355; margin: 20rpx 0 12rpx; padding-left: 10rpx; }
+.setting-item { flex-direction: row; justify-content: space-between; align-items: center; display: flex; padding: 26rpx 24rpx; border-bottom: 1rpx solid #f0e8d8; }
+.setting-item:last-child { border-bottom: none; }
+.setting-label { font-size: 28rpx; color: #5D4037; }
+.setting-options { flex-direction: row; display: flex; gap: 12rpx; }
+.option-btn { background: #f0e8d8; padding: 8rpx 22rpx; border-radius: 8rpx; font-size: 24rpx; color: #5D4037; }
+.option-btn.active { background: #D4A84B; color: #fff; }
+.setting-value { font-size: 24rpx; color: #8B7355; }
+.setting-arrow { font-size: 36rpx; color: #ccc; }

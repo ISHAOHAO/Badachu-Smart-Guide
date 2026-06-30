@@ -1,0 +1,55 @@
+<view class="page hidden-spot-page">
+  <view class="top-section">
+    <view class="zen-icon {{exploring ? 'pulse' : ''}}">
+      <image src="/images/zen-icon.png" mode="aspectFit"></image>
+      <view class="ripple" wx:if="{{exploring}}"></view>
+      <view class="ripple ripple-2" wx:if="{{exploring}}"></view>
+      <view class="ripple ripple-3" wx:if="{{exploring}}"></view>
+    </view>
+  </view>
+
+  <view class="status-card">
+    <view class="status-row">
+      <text class="status-label">状态</text>
+      <text class="status-value {{exploring ? 'active' : ''}}">{{exploring ? '探寻中...' : '待探寻'}}</text>
+    </view>
+    <view class="status-row">
+      <text class="status-label">信号强度</text>
+      <view class="signal-bars">
+        <view class="bar {{signalLevel >= 1 ? 'active' : ''}}"></view>
+        <view class="bar {{signalLevel >= 2 ? 'active' : ''}}"></view>
+        <view class="bar {{signalLevel >= 3 ? 'active' : ''}}"></view>
+        <view class="bar {{signalLevel >= 4 ? 'active' : ''}}"></view>
+      </view>
+    </view>
+    <view class="status-row">
+      <text class="status-label">距离提示</text>
+      <text class="status-hint">{{distanceHint}}</text>
+    </view>
+  </view>
+
+  <button class="explore-btn {{exploring ? 'stop' : 'start'}}" bindtap="toggleExplore">
+    <text>{{exploring ? '停止探寻' : '开始探寻'}}</text>
+  </button>
+
+  <view class="section">
+    <view class="section-header">
+      <text class="section-title">隐藏打卡点</text>
+      <text class="section-count">{{foundCount}}/6</text>
+    </view>
+    <view class="hidden-spot-list">
+      <view class="hidden-spot-item {{item.found ? 'found' : ''}}" wx:for="{{hiddenSpots}}" wx:key="id" data-id="{{item.id}}" bindtap="onSpotTap">
+        <view class="spot-left">
+          <view class="spot-type-badge">{{item.type}}</view>
+          <view class="spot-name">{{item.name}}</view>
+        </view>
+        <view class="spot-right">
+          <text class="spot-status-text" wx:if="{{item.found}}">已发现</text>
+          <text class="spot-signal" wx:else>信号{{item.signalRequired}}级</text>
+          <text class="spot-blessing" wx:if="{{!item.found}}">50福光</text>
+          <image class="arrow" src="/images/arrow-right.png" mode="aspectFit" wx:if="{{!item.found && signalLevel >= item.signalRequired}}"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

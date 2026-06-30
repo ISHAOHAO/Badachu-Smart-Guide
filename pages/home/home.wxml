@@ -1,0 +1,113 @@
+<view class="page">
+  <view class="header">
+    <view class="header-bg"></view>
+    <view class="header-content">
+      <text class="app-title">八大处·智慧导览</text>
+      <text class="app-subtitle">佛教文化圣地数字导览平台</text>
+      <view class="fortune-bar" bindtap="onFortuneTap">
+        <text class="fortune-label">福光</text>
+        <text class="fortune-value">{{fortuneLight}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="age-selector">
+    <view class="age-tabs">
+      <view class="age-tab {{currentAgeZone === 'adult' ? 'active' : ''}}" data-zone="adult" bindtap="switchAgeZone">
+        <text>成人版</text>
+      </view>
+      <view class="age-tab {{currentAgeZone === 'children' ? 'active' : ''}}" data-zone="children" bindtap="switchAgeZone">
+        <text>儿童版</text>
+      </view>
+      <view class="age-tab {{currentAgeZone === 'teen' ? 'active' : ''}}" data-zone="teen" bindtap="switchAgeZone">
+        <text>青少年版</text>
+      </view>
+      <view class="age-tab {{currentAgeZone === 'senior' ? 'active' : ''}}" data-zone="senior" bindtap="switchAgeZone">
+        <text>银发版</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="quick-actions">
+    <view class="action-item" bindtap="goMap">
+      <view class="action-icon map-icon">🗺️</view>
+      <text class="action-label">导览地图</text>
+    </view>
+    <view class="action-item" bindtap="goSpots">
+      <view class="action-icon spot-icon">🏛️</view>
+      <text class="action-label">景区介绍</text>
+    </view>
+    <view class="action-item" bindtap="goCheckin">
+      <view class="action-icon checkin-icon">📸</view>
+      <text class="action-label">拍照打卡</text>
+    </view>
+    <view class="action-item" bindtap="goQuiz">
+      <view class="action-icon quiz-icon">📝</view>
+      <text class="action-label">文化问答</text>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-header">
+      <text class="section-title">八大古刹</text>
+      <text class="section-more" bindtap="goSpots">查看全部 ›</text>
+    </view>
+    <scroll-view class="spots-scroll" scroll-x enable-flex>
+      <view class="spot-card" wx:for="{{spots}}" wx:key="id" data-id="{{item.id}}" bindtap="goSpotDetail">
+        <view class="spot-card-icon">{{item.icon}}</view>
+        <view class="spot-card-info">
+          <text class="spot-card-order">{{item.templeOrder}}</text>
+          <text class="spot-card-name">{{item.name}}</text>
+          <text class="spot-card-subtitle">{{item.subtitle}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class="section">
+    <view class="section-header">
+      <text class="section-title">探索发现</text>
+    </view>
+    <view class="discovery-grid">
+      <view class="discovery-item" bindtap="goTreasure">
+        <view class="discovery-icon">💎</view>
+        <text class="discovery-name">集宝</text>
+        <text class="discovery-desc">收集灵物兑换奖励</text>
+      </view>
+      <view class="discovery-item" bindtap="goBadges">
+        <view class="discovery-icon">🏅</view>
+        <text class="discovery-name">徽章</text>
+        <text class="discovery-desc">收集成就徽章</text>
+      </view>
+      <view class="discovery-item" bindtap="goLottery">
+        <view class="discovery-icon">🎁</view>
+        <text class="discovery-name">抽奖</text>
+        <text class="discovery-desc">消耗福光抽好礼</text>
+      </view>
+      <view class="discovery-item" bindtap="goLeaderboard">
+        <view class="discovery-icon">🏆</view>
+        <text class="discovery-name">排行榜</text>
+        <text class="discovery-desc">看看谁在榜首</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="section" wx:if="{{nearbyHint}}">
+    <view class="nearby-hint" bindtap="goHiddenSpot">
+      <view class="hint-icon">🔔</view>
+      <view class="hint-content">
+        <text class="hint-title">附近有神秘之处待探索</text>
+        <text class="hint-desc">循着禅音去寻找吧</text>
+      </view>
+      <text class="hint-arrow">›</text>
+    </view>
+  </view>
+
+  <view class="section footer-section">
+    <view class="footer-info">
+      <text class="footer-text">北京八大处公园</text>
+      <text class="footer-text">国家4A级景区</text>
+      <text class="footer-copyright">© 2026 八大处智慧导览</text>
+    </view>
+  </view>
+</view>

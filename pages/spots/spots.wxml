@@ -1,0 +1,29 @@
+<view class="page">
+  <view class="page-header">
+    <text class="page-title">景区介绍</text>
+    <text class="page-subtitle">八大古刹 · 千年文化</text>
+  </view>
+
+  <view class="overview-card">
+    <view class="overview-content">
+      <text class="overview-title">八大处公园概况</text>
+      <text class="overview-text">国家4A级景区 | 占地253公顷 | 唐代至清代千年历史</text>
+      <text class="overview-text">位于北京市石景山区西山余脉，因山中有八座古刹而得名</text>
+    </view>
+  </view>
+
+  <view class="spots-list">
+    <view class="spot-item" wx:for="{{spots}}" wx:key="id" data-id="{{item.id}}" bindtap="goDetail">
+      <view class="spot-rank">{{item.templeOrder}}</view>
+      <view class="spot-content">
+        <text class="spot-name">{{item.name}}</text>
+        <text class="spot-subtitle">{{item.subtitle}}</text>
+        <view class="spot-tags">
+          <text class="spot-tag">{{item.founded}}</text>
+        </view>
+        <text class="spot-desc">{{item.description}}</text>
+      </view>
+      <text class="spot-arrow">›</text>
+    </view>
+  </view>
+</view>

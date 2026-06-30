@@ -1,0 +1,57 @@
+<view class="page checkin-page">
+  <view class="header">
+    <text class="title">拍照打卡</text>
+    <text class="subtitle">记录你的修行足迹</text>
+  </view>
+
+  <view class="banner">
+    <image class="banner-icon" src="/images/light.png" mode="aspectFit"></image>
+    <text class="banner-text">打卡得福光 | 隐藏打卡得50福光</text>
+  </view>
+
+  <view class="section">
+    <view class="section-header">
+      <text class="section-title">明显打卡点</text>
+      <text class="section-count">{{checkedCount}}/8</text>
+    </view>
+    <view class="spot-list">
+      <view class="spot-item {{item.checked ? 'checked' : ''}}" wx:for="{{spots}}" wx:key="id" data-id="{{item.id}}" bindtap="onSpotTap">
+        <view class="spot-icon">
+          <image src="{{item.icon}}" mode="aspectFit"></image>
+          <view class="spot-status" wx:if="{{item.checked}}">
+            <text class="icon-check">✓</text>
+          </view>
+        </view>
+        <text class="spot-name">{{item.name}}</text>
+        <text class="spot-blessing" wx:if="{{!item.checked}}">+10福光</text>
+        <text class="spot-done" wx:else>已打卡</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-header">
+      <text class="section-title">隐藏探索区域</text>
+      <text class="section-count">{{hiddenFound}}/6</text>
+    </view>
+    <view class="hidden-area" bindtap="goHiddenSpot">
+      <image class="hidden-bg" src="/images/hidden-bg.png" mode="aspectFill"></image>
+      <text class="hidden-hint">点击进入禅音探寻</text>
+    </view>
+  </view>
+
+  <view class="section" wx:if="{{recentPhotos.length > 0}}">
+    <view class="section-header">
+      <text class="section-title">最近照片</text>
+    </view>
+    <view class="photo-grid">
+      <view class="photo-item" wx:for="{{recentPhotos}}" wx:key="id" bindtap="viewPhoto" data-url="{{item.photo}}">
+        <image src="{{item.photo}}" mode="aspectFill"></image>
+        <view class="photo-info">
+          <text class="photo-spot">{{item.spot}}</text>
+          <text class="photo-time">{{item.time}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
